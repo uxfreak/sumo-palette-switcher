@@ -16,16 +16,15 @@ function App() {
     <div className="App">
       <input type="text" className="input-color" onChange={(e) => getSumoColor(e.target.value)} />
       <div className="colorshow">
-        <div className="selected" >
+        <div className="color-areas" >
           <div className="swatch" style={{ backgroundColor: color, height: 200 }}></div>
           <h3 className="title">Selected Color</h3>
-          <p className="hex">{color}</p>
+          <pre className="hex">{color}</pre>
         </div>
-        <div className="sumo">
+        <div className="color-areas">
           <div className="swatch" style={{ backgroundColor: sumoColor.color, height: 200 }}></div>
           <h3 className="title">Sumo Color</h3>
-          <p className="hex">{sumoColor.color}</p>
-          <p className="name">{sumoColor.name}</p>
+          <pre className="hex">{sumoColor.color}({sumoColor.name})</pre>
         </div>
       </div>
     </div >
