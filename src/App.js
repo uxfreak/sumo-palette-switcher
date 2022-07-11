@@ -15,18 +15,18 @@ function App() {
   return (
     <div className="App">
       <input type="text" className="input-color" onChange={(e) => getSumoColor(e.target.value)} />
-      <div className="colorshow">
+      {color && sumoColor && <div className="colorshow">
         <div className="color-areas" >
           <div className="swatch" style={{ backgroundColor: color, height: 200 }}></div>
           <h3 className="title">Selected Color</h3>
           <pre className="hex">{color}</pre>
         </div>
         <div className="color-areas">
-          <div className="swatch" style={{ backgroundColor: sumoColor.color, height: 200 }}></div>
+          <div className="swatch" style={{ backgroundColor: sumoColor.color, height: 200 }} onClick={() => navigator.clipboard.writeText(sumoColor.color)}></div>
           <h3 className="title">Sumo Color</h3>
           <pre className="hex">{sumoColor.color}({sumoColor.name})</pre>
         </div>
-      </div>
+      </div>}
     </div >
   );
 }
