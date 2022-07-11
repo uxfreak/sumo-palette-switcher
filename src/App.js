@@ -14,7 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <input type="text" className="input-color" onChange={(e) => getSumoColor(e.target.value)} />
+      <pre>Sumo Color Matcher</pre>
+      <input placeholder='Enter a hex code eg. #222' type="text" className="input-color" onChange={(e) => getSumoColor(e.target.value)} />
       {color && sumoColor && <div className="colorshow">
         <div className="color-areas" >
           <div className="swatch" style={{ backgroundColor: color, height: 200 }}></div>
