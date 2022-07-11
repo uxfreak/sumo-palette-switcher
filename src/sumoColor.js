@@ -420,7 +420,7 @@ const getClosestColor = (inputHex) => {
     const inputRGB = get_rgbObject(inputHex)
     const nearestColor = diff.closest(inputRGB, paletteRGBList)
     const nearestColorHex = `#${rgbHex(nearestColor.R, nearestColor.G, nearestColor.B)}`
-    const indexInPaletteList = palette.findIndex(x => x.color.toLowerCase() == nearestColorHex)
+    const indexInPaletteList = palette.findIndex(x => x.color.toLowerCase() === nearestColorHex)
     const nearestColorObject = palette[indexInPaletteList]
     return nearestColorObject
 }

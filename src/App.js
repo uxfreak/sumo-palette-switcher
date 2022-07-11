@@ -24,7 +24,7 @@ function App() {
         </div>
         <div className="color-areas">
           <div className="swatch" style={{ backgroundColor: sumoColor.color, height: 200 }} onClick={() => navigator.clipboard.writeText(sumoColor.color)}></div>
-          <h3 className="title">Sumo Color</h3>
+          <h3 className="title">Closest Sumo Color</h3>
           <pre className="hex">{sumoColor.color}({sumoColor.name})</pre>
         </div>
       </div>}
